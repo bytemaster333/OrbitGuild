@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "buildCommand": "npm ci && npm run build:static",
+  "outputDirectory": "dist/public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/((?!assets|favicon\\.ico|robots\\.txt).*)", "destination": "/index.html" }
+  ]
+}
