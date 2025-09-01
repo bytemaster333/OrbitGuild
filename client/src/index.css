@@ -1,0 +1,446 @@
+/* Import all fonts first */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Merriweather:wght@300;400;700&family=Crimson+Text:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(180 6.6667% 97.0588%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(203.8863 88.2845% 53.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(210 25% 7.8431%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(211.5789 51.3514% 92.7451%);
+  --accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(201.4286 30.4348% 90.9804%);
+  --input: hsl(200 23.0769% 97.4510%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(180 6.6667% 97.0588%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(211.5789 51.3514% 92.7451%);
+  --sidebar-accent-foreground: hsl(203.8863 88.2845% 53.1373%);
+  --sidebar-border: hsl(205.0000 25.0000% 90.5882%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Inter, sans-serif;
+  --font-serif: 'Crimson Text', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Enhanced Medieval theme colors */
+  --medieval-primary: hsl(217 87% 23%); /* Royal Blue */
+  --medieval-secondary: hsl(343 76% 47%); /* Burgundy */
+  --medieval-accent: hsl(45 88% 56%); /* Gold */
+  --medieval-parchment: hsl(42 65% 92%); /* Deep Parchment */
+  --medieval-parchment-dark: hsl(42 45% 88%); /* Darker Parchment */
+  --medieval-wood: hsl(20 25% 20%); /* Dark Wood */
+  --medieval-dark: hsl(0 0% 15%);
+  --medieval-background: hsl(42 35% 88%);
+  --medieval-text: hsl(0 0% 13%);
+  --medieval-border: hsl(45 35% 75%);
+  --medieval-emerald: hsl(160 70% 35%); /* Forest Green */
+  --medieval-copper: hsl(15 65% 45%); /* Copper */
+  --medieval-silver: hsl(210 15% 75%); /* Silver */
+  --medieval-shadow: hsla(0 0% 0% / 0.15);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(203.7736 87.6033% 52.5490%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(195.0000 15.3846% 94.9020%);
+  --secondary-foreground: hsl(210 25% 7.8431%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(356.3033 90.5579% 54.3137%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(202.8169 89.1213% 53.1373%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(228 9.8039% 10%);
+  --sidebar-foreground: hsl(0 0% 85.0980%);
+  --sidebar-primary: hsl(202.8169 89.1213% 53.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(205.7143 70% 7.8431%);
+  --sidebar-accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --sidebar-border: hsl(205.7143 15.7895% 26.0784%);
+  --sidebar-ring: hsl(202.8169 89.1213% 53.1373%);
+  --font-sans: Inter, sans-serif;
+  --font-serif: 'Crimson Text', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 1.3rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 2px 4px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 4px 6px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00), 0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
+
+  /* Enhanced Medieval theme colors for dark mode */
+  --medieval-primary: hsl(217 87% 35%);
+  --medieval-secondary: hsl(343 76% 55%);
+  --medieval-accent: hsl(45 88% 65%);
+  --medieval-parchment: hsl(42 25% 15%);
+  --medieval-parchment-dark: hsl(42 15% 12%);
+  --medieval-wood: hsl(20 15% 12%);
+  --medieval-dark: hsl(0 0% 85%);
+  --medieval-background: hsl(42 15% 8%);
+  --medieval-text: hsl(0 0% 87%);
+  --medieval-border: hsl(45 15% 25%);
+  --medieval-emerald: hsl(160 70% 45%);
+  --medieval-copper: hsl(15 65% 55%);
+  --medieval-silver: hsl(210 15% 85%);
+  --medieval-shadow: hsla(0 0% 0% / 0.25);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-serif antialiased bg-medieval-background text-medieval-text;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(42 65% 92% / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(45 88% 56% / 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .royal-scroll-card {
+    @apply relative rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02];
+    background: linear-gradient(135deg, 
+      hsl(42 65% 95% / 0.95) 0%,
+      hsl(42 55% 92% / 0.95) 50%,
+      hsl(42 45% 88% / 0.95) 100%);
+    border: 2px solid hsl(45 60% 80%);
+    box-shadow: 
+      0 25px 50px -12px var(--medieval-shadow),
+      0 0 0 1px hsl(45 88% 56% / 0.1),
+      inset 0 1px 0 hsl(42 100% 98%);
+  }
+
+  .royal-scroll-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, 
+      hsl(45 88% 56% / 0.1) 0%, 
+      transparent 30%, 
+      transparent 70%, 
+      hsl(217 87% 23% / 0.05) 100%);
+    pointer-events: none;
+  }
+
+  .lesson-card {
+    @apply relative rounded-2xl p-6 transition-all duration-300 hover:shadow-xl;
+    background: linear-gradient(135deg, 
+      hsl(0 0% 100% / 0.9) 0%, 
+      hsl(42 30% 98% / 0.9) 100%);
+    border: 1px solid hsl(45 40% 85%);
+    box-shadow: 
+      0 4px 20px var(--medieval-shadow),
+      inset 0 1px 0 hsl(0 0% 100% / 0.8);
+  }
+
+  .lesson-card:hover {
+    transform: translateY(-2px) scale(1.01);
+    border-color: hsl(45 88% 56% / 0.4);
+    box-shadow: 
+      0 8px 30px var(--medieval-shadow),
+      0 0 20px hsl(45 88% 56% / 0.2),
+      inset 0 1px 0 hsl(0 0% 100% / 0.9);
+  }
+
+  .medieval-btn-primary {
+    @apply px-8 py-4 bg-medieval-primary text-white rounded-xl font-semibold hover:opacity-90 transition-all transform hover:scale-105 shadow-lg relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      var(--medieval-primary) 0%, 
+      hsl(217 87% 28%) 50%, 
+      var(--medieval-secondary) 100%);
+    border: 2px solid var(--medieval-accent);
+    box-shadow: 
+      0 8px 25px var(--medieval-shadow),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2),
+      0 0 20px hsl(45 88% 56% / 0.3);
+  }
+  
+  .medieval-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .medieval-btn-primary:hover::before {
+    left: 100%;
+  }
+
+  .medieval-btn-secondary {
+    @apply px-8 py-4 border-2 border-medieval-primary text-medieval-primary rounded-xl font-semibold hover:bg-medieval-primary hover:text-white transition-all;
+  }
+
+  /* Additional gradient utilities */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Border width utilities */
+  .border-l-3 { border-left-width: 3px; }
+  .border-r-3 { border-right-width: 3px; }
+  .border-t-3 { border-top-width: 3px; }
+  .border-b-3 { border-bottom-width: 3px; }
+  
+  /* Border radius utilities for speech bubble tails */
+  .border-t-12 { border-top-width: 12px; }
+  .border-b-12 { border-bottom-width: 12px; }
+  .border-r-16 { border-right-width: 16px; }
+  .border-t-8 { border-top-width: 8px; }
+  .border-b-8 { border-bottom-width: 8px; }
+  .border-r-12 { border-right-width: 12px; }
+
+  /* Medieval academy animations */
+  @keyframes flicker {
+    0% { opacity: 0.2; }
+    25% { opacity: 0.4; }
+    50% { opacity: 0.3; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0.2; }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+
+  /* Simple transparent parchment overlay */
+  .parchment-overlay {
+    background: rgba(255, 248, 220, 0.35);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(200, 166, 75, 0.4);
+    box-shadow: 
+      0 6px 20px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  /* Simple transparent story box */
+  .medieval-story-box {
+    background: rgba(255, 248, 220, 0.4);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(200, 166, 75, 0.3);
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* Enhanced ScrollPanel styling */
+  .enhanced-scroll-panel {
+    @apply relative rounded-2xl p-8 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] border border-gold/30;
+    background: linear-gradient(135deg, 
+      hsl(42 65% 98% / 0.9) 0%,
+      hsl(42 55% 95% / 0.9) 50%,
+      hsl(42 45% 92% / 0.9) 100%);
+    box-shadow: 
+      0 20px 40px -12px var(--medieval-shadow),
+      0 0 0 1px hsl(45 88% 56% / 0.15),
+      inset 0 1px 0 hsl(42 100% 99%);
+  }
+
+  .enhanced-scroll-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, 
+      hsl(45 88% 56% / 0.08) 0%, 
+      transparent 30%, 
+      transparent 70%, 
+      hsl(217 87% 23% / 0.03) 100%);
+    pointer-events: none;
+  }
+
+  .enhanced-scroll-panel:hover {
+    box-shadow: 
+      0 25px 50px -12px var(--medieval-shadow),
+      0 0 30px hsl(45 88% 56% / 0.2),
+      inset 0 1px 0 hsl(42 100% 99%);
+  }
+
+  .medieval-card {
+    @apply bg-medieval-parchment rounded-xl shadow-lg relative overflow-hidden;
+    border: 3px solid var(--medieval-border);
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.02) 2px,
+        rgba(0, 0, 0, 0.02) 4px
+      );
+    box-shadow: 
+      0 8px 30px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .medieval-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--medieval-accent), var(--medieval-secondary), var(--medieval-accent));
+  }
+
+  .medieval-panel {
+    @apply bg-medieval-parchment rounded-xl p-6 shadow-lg relative;
+    border: 2px solid var(--medieval-border);
+    background-image: 
+      radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 40px,
+        rgba(0, 0, 0, 0.02) 40px,
+        rgba(0, 0, 0, 0.02) 42px
+      );
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .medieval-scroll {
+    @apply bg-medieval-parchment rounded-2xl p-8 shadow-xl relative;
+    border: 3px solid var(--medieval-border);
+    background-image: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        rgba(0, 0, 0, 0.03) 20px,
+        rgba(0, 0, 0, 0.03) 21px
+      );
+  }
+  
+  .medieval-scroll::before,
+  .medieval-scroll::after {
+    content: '◆';
+    position: absolute;
+    top: 15px;
+    color: var(--medieval-accent);
+    font-size: 1.2rem;
+  }
+  
+  .medieval-scroll::before {
+    left: 15px;
+  }
+  
+  .medieval-scroll::after {
+    right: 15px;
+  }
+  
+  .guide-character {
+    @apply fixed bottom-4 right-4 z-50;
+  }
+  
+  .speech-bubble {
+    @apply bg-white rounded-lg p-3 shadow-lg relative max-w-xs;
+    border: 2px solid var(--medieval-border);
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+  }
+
+  /* Royal Scroll Card Component */
+  .royal-scroll-card {
+    @apply bg-white/90 backdrop-blur-md border-2 border-orange-200 rounded-2xl shadow-2xl relative overflow-hidden;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(251, 146, 60, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(234, 88, 12, 0.06) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(255, 237, 213, 0.3) 0%, rgba(254, 215, 170, 0.2) 100%);
+  }
+
+  .royal-scroll-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.02) 0%, transparent 50%, rgba(234, 88, 12, 0.03) 100%);
+    pointer-events: none;
+  }
+
+  .royal-scroll-card:hover {
+    @apply shadow-2xl border-orange-300 scale-[1.02];
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .medieval-sidebar {
+    @apply fixed left-0 top-0 h-full w-20 bg-medieval-wood shadow-2xl z-40;
+    background-image: 
+      repeating-linear-gradient(
+        180deg,
+        var(--medieval-wood),
+        var(--medieval-wood) 30px,
+        hsl(20 25% 25%) 30px,
+        hsl(20 25% 25%) 32px
+      );
+  }
+}

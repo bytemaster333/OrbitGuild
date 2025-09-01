@@ -1,0 +1,10 @@
+{
+  "DEPLOY_FLOW": [
+    "Connecting RPC https://orbit-a.example ...",
+    "Loading wallet from .env (ORBIT_DEPLOYER_PK) ...",
+    "Preparing ERC-20 deployment (DGLD, 18, 1,000,000) ...",
+    "Sending tx...",
+    "Tx mined: 0xabc123... Gas used: 452k",
+    "Contract deployed at: 0xDeF123..."
+  ]
+}

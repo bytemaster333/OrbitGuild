@@ -1,0 +1,13 @@
+{
+  "quizId": "Q_ERC20_MINI",
+  "lessonId": "L_ORBIT_ERC20_INTRO",
+  "title": "ERC-20 Mini Quiz",
+  "passScore": 3,
+  "questions": [
+    { "t": "mc", "q": "ERC-20 is for which asset type?", "choices": ["Non-fungible", "Fungible", "Stablecoins only"], "a": 1 },
+    { "t": "mc", "q": "Which is not strictly required?", "choices": ["name", "symbol", "owner", "decimals"], "a": 2 },
+    { "t": "mc", "q": "Who converts human amount to wei?", "choices": ["Wallet UI", "YAML", "Script/SDK"], "a": 2 },
+    { "t": "mc", "q": "Which order is correct?", "choices": ["deploy → approve → transferFrom", "approve → deploy → transferFrom", "deploy → transfer → approve"], "a": 0 },
+    { "t": "mc", "q": "Why do chainId & rpcUrl matter?", "choices": ["Theme color", "Connect to the right network", "Only UI cosmetics"], "a": 1 }
+  ]
+}

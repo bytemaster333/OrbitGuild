@@ -1,0 +1,5 @@
+[
+  { "label": "Arbitrum One (L2)", "chainId": 42161, "rpc": "https://arb1.example" },
+  { "label": "Orbit L3 — Example A", "chainId": 981234, "rpc": "https://orbit-a.example" },
+  { "label": "Orbit L3 — Example B", "chainId": 982345, "rpc": "https://orbit-b.example" }
+]

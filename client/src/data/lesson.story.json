@@ -1,0 +1,137 @@
+{
+  "title": "The Royal Chainwright's Apprentice",
+  "guide": {
+    "name": "Scribe Elara",
+    "avatar": "🧙‍♀️"
+  },
+  "scenes": [
+    {
+      "id": "summons",
+      "bg": "library",
+      "guide": {
+        "text": "Welcome, young apprentice. The markets thirst for a new coin, and you have been chosen for this sacred task."
+      },
+      "paragraphs": [
+        "A summons arrives at dusk, carried by a raven with eyes like starlight. You, a Royal Chainwright Apprentice, are called to the Arcane Mint where ancient knowledge meets modern craft.",
+        "The great hall echoes with whispers of commerce and creation. Scribe Elara emerges from the shadows, her robes adorned with blockchain runes that shimmer in the candlelight.",
+        "'The realm's prosperity depends on trusted currency,' she speaks softly. 'Will you answer the call to mint the kingdom's next great token?'"
+      ],
+      "actions": [
+        { "label": "Accept the Summons", "action": "next", "effect": "sparkle" },
+        { "label": "Inspect the Raven's Message", "action": "tooltip", "payload": "The royal seal bears the mark of the Treasury Guild, confirming this is an official commission." }
+      ],
+      "effects": ["pageTurn"]
+    },
+    {
+      "id": "trade_roads",
+      "bg": "map",
+      "guide": {
+        "text": "Observe these mystical pathways. Each road connects realms where your token shall flow."
+      },
+      "paragraphs": [
+        "Elara unfurls a glowing map that hovers above the ancient oak table. Golden threads trace the trade roads between realms, pulsing with ethereal energy.",
+        "These are the sacred pathways—Orbit chains floating above the great Arbitrum realm. Each road has its own messenger's route (RPC) that carries transactions, and a sealed crest (chainId) that identifies the realm.",
+        "'Choose your path wisely,' Elara warns. 'The wrong road leads to empty markets, but the right one ensures your coin reaches every corner of the kingdom.'"
+      ],
+      "actions": [
+        { "label": "Study the Arbitrum Route", "action": "tooltip", "payload": "Arbitrum One: The main trade highway with chainId 42161. Most merchants travel this well-established road." },
+        { "label": "Examine Orbit Paths", "action": "tooltip", "payload": "Orbit chains: Custom realms built above Arbitrum. Each has unique properties and specialized markets." },
+        { "label": "Continue Journey", "action": "next", "effect": "glow" }
+      ],
+      "effects": ["mapGlow"]
+    },
+    {
+      "id": "royal_coin",
+      "bg": "mint",
+      "guide": {
+        "text": "Behold the essence of fungible currency. Each coin mirrors its brothers, bearing the same sacred properties."
+      },
+      "paragraphs": [
+        "From a velvet pouch, Elara produces a gilded coin that catches the light with supernatural brilliance. Its surface bears intricate engravings that seem to shift and dance.",
+        "This is the nature of the royal coin—fungible currency where each piece mirrors the next in perfect equality. The ancient mages called this pattern ERC-20, a standard of trust recognized across all realms.",
+        "'Every coin requires a name that speaks its purpose, a symbol that marks its origin, decimals that define its grain, an initial supply for the royal treasury, and a treasurer to guard its first minting.'"
+      ],
+      "actions": [
+        { "label": "Examine the Coin's Name", "action": "tooltip", "payload": "Token Name: A descriptive title like 'Royal Gold Coin' that appears in treasuries and ledgers." },
+        { "label": "Study the Symbol", "action": "tooltip", "payload": "Symbol: A short identifier like 'RGC' that traders use for quick recognition." },
+        { "label": "Feel the Coin's Weight", "action": "tooltip", "payload": "Decimals: Usually 18, determines how finely the coin can be divided. Like splitting gold into tiny grains." },
+        { "label": "Proceed to the Ledger", "action": "next", "effect": "coinFlip" }
+      ],
+      "effects": ["coinShimmer"]
+    },
+    {
+      "id": "sacred_ledger",
+      "bg": "ledger",
+      "guide": {
+        "text": "The ledger awaits your inscription. Each field holds power—choose with wisdom, young chainwright."
+      },
+      "paragraphs": [
+        "A massive tome materializes before you, its pages glowing with runes that pulse in rhythm with your heartbeat. This is the Sacred Ledger where all token configurations are recorded.",
+        "Floating above the parchment, ethereal symbols hover over blank spaces, each one representing a crucial decision that will shape your token's destiny in the realm.",
+        "'Touch each rune to understand its meaning,' Elara instructs. 'The ledger remembers every choice, and once inscribed, these parameters become law across all realms.'"
+      ],
+      "actions": [
+        { "label": "Touch Initial Supply Rune", "action": "tooltip", "payload": "Initial Supply: The number of coins minted at creation. Consider carefully—this determines your token's scarcity." },
+        { "label": "Examine Owner Rune", "action": "tooltip", "payload": "Owner Address: The wallet that will receive the initial supply. Usually your own address or a treasury contract." },
+        { "label": "Study Decimals Rune", "action": "tooltip", "payload": "Decimals: Typically 18 for maximum flexibility. Determines the smallest unit your token can be divided into." },
+        { "label": "Prepare for the Trial", "action": "next", "effect": "runeGlow" }
+      ],
+      "effects": ["ledgerGlow"]
+    },
+    {
+      "id": "trial_of_craft",
+      "bg": "trial",
+      "guide": {
+        "text": "Now comes the trial of understanding. Arrange the seals in the order of deployment, and prove your knowledge worthy."
+      },
+      "paragraphs": [
+        "The chamber transforms into a circular arena where three ancient seals hover in the air, each inscribed with powerful deployment magic.",
+        "Before you stands the Trial Plinth, a stone altar that will judge your understanding of the deployment sequence. The seals must be placed in the correct order, or the runes will dim and reject your offering.",
+        "'Remember the sacred sequence,' Elara whispers urgently. 'First the token must be deployed, then approved for transfer, and finally the transfer can be executed. This is the way of safe commerce.'"
+      ],
+      "actions": [
+        { "label": "Place Deploy Seal First", "action": "trial", "payload": { "choice": "deploy", "correct": true, "explanation": "Correct! The token contract must exist before any other operations." } },
+        { "label": "Place Approve Seal Second", "action": "trial", "payload": { "choice": "approve", "correct": true, "explanation": "Perfect! Approval grants permission for transfers." } },
+        { "label": "Place TransferFrom Seal Third", "action": "trial", "payload": { "choice": "transferFrom", "correct": true, "explanation": "Excellent! Now the approved tokens can be transferred safely." } },
+        { "label": "Complete the Trial", "action": "next", "effect": "triumph" }
+      ],
+      "effects": ["sealGlow"]
+    },
+    {
+      "id": "oath_of_safety",
+      "bg": "vault",
+      "guide": {
+        "text": "Heed this sacred oath, apprentice. Your private keys are the most precious treasure—guard them with your life."
+      },
+      "paragraphs": [
+        "Elara's expression grows solemn as she leads you to the Vault of Secrets, where ethereal locks float in perpetual motion around a glowing keystone.",
+        "'Your private key is your signature, your proof of ownership, your very identity in the blockchain realm,' she intones. 'It must live only in your personal satchel—never revealed to the web or any untrusted soul.'",
+        "The vault's walls pulse with protective wards. 'Store it in your environment file (.env), speak it to no one, and remember—the Mint sees only the shape of your intent, never the key itself. This is the first law of blockchain safety.'"
+      ],
+      "actions": [
+        { "label": "Swear the Oath", "action": "tooltip", "payload": "I solemnly swear to protect my private keys and never share them with any application or website." },
+        { "label": "Understand .env Files", "action": "tooltip", "payload": "Environment files store secrets locally and are never committed to public repositories." },
+        { "label": "Proceed to Your Destiny", "action": "next", "effect": "oathGlow" }
+      ],
+      "effects": ["vaultShimmer"]
+    },
+    {
+      "id": "finale",
+      "bg": "hall",
+      "guide": {
+        "text": "Your training is complete, young chainwright. Choose your path—the Forge awaits your creativity, or face the Council's Trial to prove your knowledge."
+      },
+      "paragraphs": [
+        "The great doors of the Arcane Mint swing open with a resonant boom, revealing two paths that diverge into destiny. Golden light streams through, illuminating your final choice.",
+        "To the left lies the Royal Token Forge, where you'll craft your actual token using the knowledge you've gained. To the right stands the Council Chamber, where the Trial by Fire will test your understanding.",
+        "'Both paths lead to mastery,' Elara smiles proudly. 'The Forge grants you power to create, while the Trial grants you wisdom to understand. Choose as your heart guides you, noble apprentice.'"
+      ],
+      "actions": [
+        { "label": "Enter the Forge", "action": "openBuilder", "effect": "forgeGlow" },
+        { "label": "Face the Trial", "action": "openQuiz", "effect": "trialGlow" },
+        { "label": "Study More Lore", "action": "restart", "effect": "mysticalSwirl" }
+      ],
+      "effects": ["grandFinale"]
+    }
+  ]
+}

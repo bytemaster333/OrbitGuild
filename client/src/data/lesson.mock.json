@@ -1,0 +1,12 @@
+{
+  "lessonId": "L_ORBIT_ERC20_INTRO",
+  "title": "Orbit & ERC-20: The Royal Chainwright's First Coin",
+  "cards": [
+    { "h": "What is Orbit?", "p": "You are a Royal Chainwright Apprentice. Orbit is a customizable L3 atop Arbitrum L2; RPC & chainId identify the kingdom's trade route." },
+    { "h": "Why ERC-20 first?", "p": "Fungible coin standard—widest support across wallets/bridges/DEXs. Fastest path to your first successful mint." },
+    { "h": "Token parameters", "p": "Name (crest), Symbol (mint mark), Decimals (granularity), Initial Supply (first treasury mint), Owner (treasurer). Human amount → wei is handled by the script." },
+    { "h": "How it runs", "p": "The guild's workbench (UI) forges YAML + a deploy script. Signing is local via .env. The web never collects your keys." }
+  ],
+  "cta": { "label": "Take the Mini Quiz", "goto": "/academy/quiz" },
+  "altCta": { "label": "Try in Builder", "goto": "/builder/single?preset=erc20_seed" }
+}
