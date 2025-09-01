@@ -3,7 +3,7 @@ OrbitGuild is a medieval-themed, narrative learning experience for Arbitrum Orbi
 This MVP focuses on education only: one guided lesson + a 5-question mini quiz with a themed certificate.
 
 ## 🌐 Live Demo
-▶︎ Live: https://your-vercel-url.vercel.app
+▶︎ Live: https://orbit-guild-t6li.vercel.app
 
 ## ✨ What’s in the MVP
 
